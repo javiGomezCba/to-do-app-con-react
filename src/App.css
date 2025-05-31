@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --rojo: #ba181b;
+  --rojo-hover: #e5383b;
+  --azul: #00b4d8;
+  --azul-hover: #48cae4;
+  --verde: #09a129;
+
+  --bg-light: #f7f9fc;
+  --bg-card-light: #fff;
+  --text-primary-light: #1f2937;
+  --text-secondary-light: #4b5563;
+  --border-light: #e5e7eb;
+
+  --bg-dark: #121212;
+  --bg-card-dark: #1f1f1f;
+  --text-primary-dark: #f9fafb;
+  --text-secondary-dark: #9ca3af;
+  --border-dark: #374151;
+}
+
+/* Base */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-primary-light);
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary-dark);
+}
+
+/* Card */
+
+.card-to-do {
+  background-color: var(--bg-card-light);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  width: 700px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode .card-to-do {
+  background-color: var(--bg-card-dark);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Contadores */
+
+.counter-todos {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  color: var(--text-secondary-light);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.dark-mode .counter-todos {
+  color: var(--text-secondary-dark);
+}
+
+.counter-todos span {
+  color: #f29559;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+
+/* Lista */
+
+ul {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--bg-light);
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.dark-mode ul li {
+  background-color: var(--bg-card-dark);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+ul li span {
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--text-primary-light);
+  transition: color 0.3s ease;
+}
+
+.dark-mode ul li span {
+  color: var(--text-primary-dark);
+}
+
+.text-decoration-dashed {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.dark-mode ul li span.text-decoration-dashed {
+  color: #666666;
+}
+
+/* Form y inputs */
+
+form {
+  display: flex;
+  gap: 20px;
+}
+
+.input-add,
+.input-update {
+  border: 1.8px solid var(--border-light);
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 18px;
+  color: var(--text-primary-light);
+  padding: 12px 18px;
+  border-radius: 9999px;
+  outline-offset: 3px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+}
+
+.input-add:focus,
+.input-update:focus {
+  border-color: var(--azul);
+  background-color: #e0f7ff;
+}
+
+.dark-mode .input-add,
+.dark-mode .input-update {
+  border-color: var(--border-dark);
+  background-color: #222222;
+  color: var(--text-primary-dark);
+}
+
+.dark-mode .input-add:focus,
+.dark-mode .input-update:focus {
+  background-color: #2a4f6b;
+  border-color: var(--azul);
+}
+
+/* Botones */
+
+.btn-add,
+.btn-edit,
+.btn-delete {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  font-size: 1.1rem;
+}
+
+.btn-add {
+  background-color: var(--azul);
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 180, 216, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: var(--azul-hover);
+  box-shadow: 0 8px 20px rgba(72, 202, 228, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-edit {
+  background-color: var(--azul);
+  color: #fff;
+}
+
+.btn-edit:hover {
+  background-color: var(--azul-hover);
+  box-shadow: 0 5px 12px rgba(72, 202, 228, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-delete {
+  background-color: var(--rojo);
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background-color: var(--rojo-hover);
+  box-shadow: 0 5px 12px rgba(229, 56, 59, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Checkbox personalizado */
+
+.container-done {
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--verde);
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.container-done.active {
+  background-color: var(--verde);
+  border-color: var(--verde);
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .card-to-do {
+    width: 95%;
+    padding: 20px;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-add {
+    width: 100%;
+    padding: 14px 0;
+  }
+
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul li span {
+    margin-bottom: 10px;
+  }
+
+  .container-done {
+    margin-bottom: 10px;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    padding: 12px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Botón toggle tema */
+
+.btn-toggle-theme {
+  background-color: transparent;
+  color: var(--text-primary-light);
+  border: 2px solid var(--text-primary-light);
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto 20px;
+  display: block;
+  width: fit-content;
+}
+
+.btn-toggle-theme:hover {
+  background-color: var(--text-primary-light);
+  color: var(--bg-light);
+}
+
+.dark-mode .btn-toggle-theme {
+  color: var(--text-primary-dark);
+  border-color: var(--text-primary-dark);
+}
+
+.dark-mode .btn-toggle-theme:hover {
+  background-color: var(--text-primary-dark);
+  color: var(--bg-dark);
+}
