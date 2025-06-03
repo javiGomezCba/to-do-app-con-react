@@ -38,7 +38,9 @@ export const TodoUpdate = ({todo, handleUpdateTodo}) => {
                 ref={focusInputRef}
             />
 
-            <button className='btn-edit' type='submit'>
+            <button
+            title='Editar tarea'
+            className='btn-edit' type='submit'>
                 <FaEdit />
             </button> 
         </form>

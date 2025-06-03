@@ -5,11 +5,12 @@
   --rojo-hover: #e5383b;
   --azul: #00b4d8;
   --azul-hover: #48cae4;
-  --verde: #09a129;
+  --verde: #15ff00;
+  --verde-hover: #70ff7c;
 
-  --bg-light: #f7f9fc;
+  --bg-light: #e6e6e6;
   --bg-card-light: #fff;
-  --text-primary-light: #1f2937;
+  --text-primary-light:  #49515f;
   --text-secondary-light: #4b5563;
   --border-light: #e5e7eb;
 
@@ -118,7 +119,8 @@ ul li {
 }
 
 ul li span {
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -132,11 +134,11 @@ ul li span {
 
 .text-decoration-dashed {
   text-decoration: line-through;
-  color: #999999;
+  color: #727272;
 }
 
 .dark-mode ul li span.text-decoration-dashed {
-  color: #666666;
+  color: #4a4a4a;
 }
 
 /* Form y inputs */
@@ -236,22 +238,44 @@ form {
   transform: translateY(-2px);
 }
 
+
 /* Checkbox personalizado */
 
 .container-done {
-  background-color: white;
-  width: 24px;
-  height: 24px;
+  border: none;
   border-radius: 50%;
-  border: 2px solid var(--verde);
   cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px #15ff00; /* más suave */
+  width: 40px;
+  height: 40px;
+  overflow: visible; /* 👈 importante */
 }
 
+.container-done:hover {
+  background-color: var(--verde-hover);
+  box-shadow: 0 4px 10px rgb(32, 255, 20);
+  transform: translateY(-2px);
+}
+  
+/* Cuando la tarea está marcada como hecha */
 .container-done.active {
   background-color: var(--verde);
-  border-color: var(--verde);
+}
+
+/* Icono dentro del botón */
+.container-done .icon-check {
+  background-color: #15ff00;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* Responsive */
@@ -275,10 +299,12 @@ form {
   ul li {
     flex-direction: column;
     align-items: flex-start;
+    
   }
 
   ul li span {
     margin-bottom: 10px;
+    
   }
 
   .container-done {

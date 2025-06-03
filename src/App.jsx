@@ -37,6 +37,7 @@ function App() {
         <button
           className="btn-toggle-theme"
           onClick={() => setDarkMode(prev => !prev)}
+          title='Cambiar entre modo oscuro y modo claro'
         >
           {darkMode ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
         </button>
@@ -51,7 +52,7 @@ function App() {
         </div>
 
         <div className='add-todo'>
-          <h3>Agregar tarea</h3>
+          <h3 title='Agrega una tarea nueva'>Agregar tarea</h3>
           <TodoAdd handleNewTodo={handleNewTodo} />
         </div>
 

@@ -1,5 +1,7 @@
 import React from 'react'
 import { FaTrash } from 'react-icons/fa';
+import { FaCheck } from "react-icons/fa";
+
 import { TodoUpdate } from './TodoUpdate';
 
 export const TodoItems = ({
@@ -10,13 +12,19 @@ export const TodoItems = ({
 }) => {
     return (
         <li>
-            <span onClick={() => handleCompleteTodo(todo.id)}>
-                <label
-                    className={`container-done ${todo.done ? 'active' : ''}`}
-                ></label>
+            <span 
+                title="Marcar como completada"
+                onClick={() => handleCompleteTodo(todo.id)}
+            >
+                <label className={`container-done ${todo.done ? 'active' : ''}`}>
+                {todo.done && <FaCheck  className="icon-check" />}
+                </label>
             </span>
-            <TodoUpdate todo={todo} handleUpdateTodo={handleUpdateTodo} />
+
+            <TodoUpdate
+            todo={todo} handleUpdateTodo={handleUpdateTodo} />
             <button 
+                title='Eliminar esta tarea'
                 className='btn-delete' 
                 onClick={() => handleDeleteTodo(todo.id)}
             >
