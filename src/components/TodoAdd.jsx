@@ -30,6 +30,7 @@ export const TodoAdd = ({handleNewTodo}) => {
                 value={description} 
                 onChange={onInputChange}
                 placeholder='¿Que hay que hacer?'
+                autoComplete='off'
             />
 
         <button className='btn-add' type='submit'>
