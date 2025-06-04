@@ -1,12 +1,36 @@
-# React + Vite
+# 🗒️ To-Do List App con React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación moderna de lista de tareas (**To-Do List**) desarrollada con **React** y Vite. Permite gestionar tareas de forma simple y eficiente, con un diseño atractivo, modo oscuro, y funcionalidades avanzadas.
 
-Currently, two official plugins are available:
+🔗 **Demo en vivo**: [to-do-list-app-con-react.vercel.app](https://to-do-list-app-con-react-theta.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Crear, editar, completar y eliminar tareas
+- 🔍 Buscar tareas por nombre en tiempo real
+- 🌓 Modo oscuro y modo claro con botón para alternar
+- 📊 Contador de tareas totales y pendientes
+- 📁 Persistencia de tareas con `localStorage`
+- 🎨 Transiciones suaves y diseño responsivo
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- React + Vite
+- Hooks personalizados (`useTodo`, `useForm`)
+- React Icons
+- CSS moderno con variables y animaciones
+- LocalStorage para persistencia
+
+---
+
+## ⚙️ Instalación local
+
+1. Clonar el repositorio
+
+```bash
+git clone https://github.com/tu-usuario/to-do-list-react.git
+cd to-do-list-react
