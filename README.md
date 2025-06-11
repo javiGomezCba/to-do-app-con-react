@@ -38,24 +38,6 @@ npm run dev
 
 Abrí tu navegador en http://localhost:5173
 
-📁 Estructura del proyecto
-
-src/
-├── components/
-│   ├── TodoAdd.jsx
-│   ├── TodoItems.jsx
-│   ├── TodoList.jsx
-│   ├── TodoUpdate.jsx
-│   └── TodoFilter.jsx
-├── hooks/
-│   ├── useForm.js
-│   └── useTodo.js
-├── App.jsx
-├── App.css
-├── main.jsx
-└── todoReducer.js
-
-
 🛠 Scripts útiles
 
 npm run dev — Inicia el servidor de desarrollo.
