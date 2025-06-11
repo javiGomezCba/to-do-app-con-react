@@ -56,4 +56,4 @@ Nicolas Gomez Cordoba
 💼 Desarrollador Frontend
 
 📧 jngomezcordoba@gmail.com
-🔗 LinkedIn
+https://www.linkedin.com/in/nicolas-gomez-cordoba
