@@ -55,6 +55,7 @@ src/
 ├── main.jsx
 └── todoReducer.js
 
+
 🛠 Scripts útiles
 
 npm run dev — Inicia el servidor de desarrollo.
