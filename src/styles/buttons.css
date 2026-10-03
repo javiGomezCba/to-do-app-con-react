@@ -1,0 +1,94 @@
+/* Botón agregar tarea */
+.btn-add {
+  background-color: var(--azul);
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 180, 216, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-add:hover {
+  background-color: var(--azul-hover);
+  box-shadow: 0 8px 20px rgba(72, 202, 228, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Botón editar */
+.btn-edit {
+  background-color: var(--azul);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 14px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.btn-edit:hover {
+  background-color: var(--azul-hover);
+  box-shadow: 0 5px 12px rgba(72, 202, 228, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Botón eliminar */
+.btn-delete {
+  background-color: var(--rojo);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 14px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: var(--rojo-hover);
+  box-shadow: 0 5px 12px rgba(229, 56, 59, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Botón toggle modo oscuro */
+.btn-toggle-theme {
+  background-color: transparent;
+  color: var(--text-primary-light);
+  border: 2px solid var(--text-primary-light);
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto 20px;
+  display: block;
+  width: fit-content;
+}
+
+.btn-toggle-theme:hover {
+  background-color: var(--text-primary-light);
+  color: var(--bg-light);
+}
+
+/* Modo oscuro */
+.dark-mode .btn-toggle-theme {
+  color: var(--text-primary-dark);
+  border-color: var(--text-primary-dark);
+}
+
+.dark-mode .btn-toggle-theme:hover {
+  background-color: var(--text-primary-dark);
+  color: var(--bg-dark);
+}

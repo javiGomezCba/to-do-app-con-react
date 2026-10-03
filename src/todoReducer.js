@@ -39,6 +39,18 @@ export const todoReducer = (initialState, action) => {
 				return todo;
 			});
 
+		case 'Patch Todo':
+			return initialState.map(todo => todo.id === action.payload.id
+				? { ...todo, ...action.payload.patch }
+				: todo
+			);
+
+		case 'Replace Todos':
+			return action.payload;
+
+		case 'Reorder Todos':
+			return action.payload;
+
 		default:
 			return initialState;
 	}

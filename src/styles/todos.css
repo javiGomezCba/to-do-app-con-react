@@ -1,0 +1,113 @@
+/* Lista principal */
+ul {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Ítems */
+ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--bg-light);
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.dark-mode ul li {
+  background-color: var(--bg-card-dark);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Texto de la tarea */
+ul li span {
+  overflow: visible;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--text-primary-light);
+  transition: color 0.3s ease;
+}
+
+.dark-mode ul li span {
+  color: var(--text-primary-dark);
+}
+
+/* Tarea completada */
+.text-decoration-dashed {
+  text-decoration: line-through;
+  color: #727272;
+}
+
+.dark-mode ul li span.text-decoration-dashed {
+  color: #4a4a4a;
+}
+
+/* Checkbox personalizado */
+
+.container-done {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px #15ff00;
+  width: 40px;
+  height: 40px;
+  overflow: visible;
+}
+
+.container-done:hover {
+  background-color: var(--verde-hover);
+  box-shadow: 0 4px 10px rgb(32, 255, 20);
+  transform: translateY(-2px);
+}
+
+.container-done.active {
+  background-color: var(--verde);
+}
+
+/* Icono check */
+.container-done .icon-check {
+  background-color: #15ff00;
+  font-size: 20px;
+  color: white;
+  pointer-events: none;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul li span {
+    margin-bottom: 10px;
+  }
+
+  .container-done {
+    margin-bottom: 10px;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    padding: 12px;
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,117 @@
+/* Formulario general */
+form {
+  display: flex;
+  gap: 20px;
+}
+
+/* Inputs de agregar y actualizar tarea */
+.input-add,
+.input-update {
+  border: 1.8px solid var(--border-light);
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 18px;
+  color: var(--text-primary-light);
+  padding: 12px 18px;
+  border-radius: 9999px;
+  outline-offset: 3px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+}
+
+.input-add:focus,
+.input-update:focus {
+  border-color: var(--azul);
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 180, 216, 0.4);
+}
+
+.dark-mode .input-add,
+.dark-mode .input-update {
+  border-color: var(--border-dark);
+  background-color: #222222;
+  color: var(--text-primary-dark);
+}
+
+.dark-mode .input-add:focus,
+.dark-mode .input-update:focus {
+  box-shadow: 0 4px 10px rgba(0, 180, 216, 0.4);
+  border-color: rgba(0, 180, 216, 0.4);
+}
+
+/* Botón agregar tarea */
+
+.btn-add {
+  background-color: var(--azul);
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 180, 216, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-add:hover {
+  background-color: var(--azul-hover);
+  box-shadow: 0 8px 20px rgba(72, 202, 228, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Botones editar y eliminar */
+
+.btn-edit,
+.btn-delete {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  font-size: 1.1rem;
+}
+
+.btn-edit {
+  background-color: var(--azul);
+  color: #fff;
+}
+
+.btn-edit:hover {
+  background-color: var(--azul-hover);
+  box-shadow: 0 5px 12px rgba(72, 202, 228, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-delete {
+  background-color: var(--rojo);
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background-color: var(--rojo-hover);
+  box-shadow: 0 5px 12px rgba(229, 56, 59, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-add {
+    width: 100%;
+    padding: 14px 0;
+  }
+}

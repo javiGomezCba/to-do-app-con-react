@@ -1,0 +1,20 @@
+:root {
+  --rojo: #ba181b;
+  --rojo-hover: #e5383b;
+  --azul: #00b4d8;
+  --azul-hover: #48cae4;
+  --verde: #15ff00;
+  --verde-hover: #70ff7c;
+
+  --bg-light: #e6e6e6;
+  --bg-card-light: #fff;
+  --text-primary-light: #49515f;
+  --text-secondary-light: #4b5563;
+  --border-light: #e5e7eb;
+
+  --bg-dark: #121212;
+  --bg-card-dark: #1f1f1f;
+  --text-primary-dark: #f9fafb;
+  --text-secondary-dark: #9ca3af;
+  --border-dark: #374151;
+}

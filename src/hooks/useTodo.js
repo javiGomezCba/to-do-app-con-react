@@ -5,7 +5,12 @@ export const useTodo = () => {
     const initialState = [];
 
     const init = () =>  {
-        return JSON.parse(localStorage.getItem('todos')) || []
+        try {
+            const storedTodos = JSON.parse(localStorage.getItem('todos'));
+            return Array.isArray(storedTodos) ? storedTodos : [];
+        } catch {
+            return [];
+        }
     }
 
     const [todos, dispatch] = useReducer(
@@ -62,6 +67,18 @@ export const useTodo = () => {
         dispatch(action);
     };
 
+    const handlePatchTodo = (id, patch) => {
+        dispatch({ type: 'Patch Todo', payload: { id, patch } });
+    };
+
+    const handleReplaceTodos = (nextTodos) => {
+        dispatch({ type: 'Replace Todos', payload: nextTodos });
+    };
+
+    const handleReorderTodos = (nextTodos) => {
+        dispatch({ type: 'Reorder Todos', payload: nextTodos });
+    };
+
     return{
         todos,
         todosCount,
@@ -69,6 +86,9 @@ export const useTodo = () => {
         handleNewTodo,
         handleDeleteTodo,
         handleCompleteTodo,
-        handleUpdateTodo
+        handleUpdateTodo,
+        handlePatchTodo,
+        handleReplaceTodos,
+        handleReorderTodos
     };
 };

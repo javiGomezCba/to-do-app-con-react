@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TodoItems } from './TodoItems';
+import { TodoItems } from './TodoItem';
 import { TodoFilter } from './TodoFilter'; // 👈 nuevo import
 
 export const TodoList = ({

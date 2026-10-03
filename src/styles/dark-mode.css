@@ -1,0 +1,43 @@
+.dark-mode .btn-toggle-theme {
+  color: var(--text-primary-dark);
+  border-color: var(--text-primary-dark);
+}
+
+.dark-mode .btn-toggle-theme:hover {
+  background-color: var(--text-primary-dark);
+  color: var(--bg-dark);
+}
+
+.dark-mode .todo-filter {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .todo-filter input[type="text"] {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+.dark-mode .todo-filter input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.dark-mode .filtros button {
+  background-color: #3a3a3a;
+  color: #ddd;
+  border: none;
+  padding: 8px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .filtros button:hover {
+  background-color: #4a4a4a;
+}
+
+.dark-mode .filtros button.activo {
+  background-color: var(--azul);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 180, 216, 0.4);
+}

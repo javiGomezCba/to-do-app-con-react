@@ -1,0 +1,90 @@
+/* Contenedor principal de filtros y búsqueda */
+.todo-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input de búsqueda */
+.todo-filter input[type="text"] {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-filter input[type="text"]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.3);
+  border-color: var(--azul);
+}
+
+/* Grupo de botones */
+.filtros {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Estilo base de los botones */
+.filtros button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 30px;
+  margin: 0 5px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover */
+.filtros button:hover {
+  background-color: #d0d0d0;
+  transform: translateY(-1px);
+}
+
+/* Activo */
+.filtros button.activo {
+  background-color: var(--azul);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 180, 216, 0.4);
+}
+
+/* Modo oscuro */
+
+.dark-mode .todo-filter {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .todo-filter input[type="text"] {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+.dark-mode .todo-filter input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.dark-mode .filtros button {
+  background-color: #3a3a3a;
+  color: #ddd;
+}
+
+.dark-mode .filtros button:hover {
+  background-color: #4a4a4a;
+}
+
+.dark-mode .filtros button.activo {
+  background-color: var(--azul);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 180, 216, 0.4);
+}
